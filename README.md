@@ -1,1 +1,2 @@
-0x00. C - Hello, World
+loop nested project
+0x02. C - Functions, nested loops
