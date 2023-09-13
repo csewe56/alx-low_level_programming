@@ -1,0 +1,11 @@
+#ifndef_MAIN_H
+
+#define_MAIN_H
+/**
+*
+Retrun: 0
+*
+void print_alphabet(void);
+int _putchar(char c)
+
+#endif
