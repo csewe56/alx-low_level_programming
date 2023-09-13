@@ -1,9 +1,7 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _MAIN_H
 
-/**
- * main _putchar file
- * Return: 0
- */
+#define _MAIN_H
+
+void print_alphabet_x10(void);
 int _putchar(char c);
 #endif
