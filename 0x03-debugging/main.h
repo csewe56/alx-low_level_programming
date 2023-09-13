@@ -1,9 +1,8 @@
-#ifndef_MAIN_H
-#define_MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
- * main libriary
- */
+#include <stdio.h>
 
-void print_alphabet(void);
-#endif
+void positive_or_negative(int i);
+
+#endif /* MAIN_H */
