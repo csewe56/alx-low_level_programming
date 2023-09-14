@@ -1,27 +1,25 @@
 #include <stdio.h>
 
-
 /**
- * main - function of the task
- * Return:always zero
+ * main - Prints the alphabet in lower then upper case
+ *
+ * Return: Always (Success)
  */
-
 int main(void)
 {
-	char i = 'a';
-	char j = 'A';
+	char c;
 
-	while (i <= 'z')
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(i);
-		i++;
+		putchar(c);
 	}
-	while (j <= 'z')
+
+	for (c = 'A'; c <= 'Z'; c++)
 	{
-		putchar(i);
-		i++;
+		putchar(c);
 	}
+
 	putchar('\n');
+
 	return (0);
 }
-

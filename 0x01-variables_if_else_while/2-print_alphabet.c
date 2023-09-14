@@ -1,20 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - this is the function of the task
- * Return: 0
+ * main - Prints the alphabet
+ *
+ * Return: Always (Success)
  */
-
 int main(void)
-
 {
-	char i = 'a';
+	char c;
 
-	while (i <= 'z')
-	{
-		putchar(i);
-		i++;
-	}
+	while (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+
 	putchar('\n');
 	return (0);
 }
