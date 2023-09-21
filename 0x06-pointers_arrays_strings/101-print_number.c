@@ -1,5 +1,5 @@
 #include "main.h"
-
+int _putchar(char c);
 /**
  * print_number - Prints an integer.
  * @n: The integer to print.
