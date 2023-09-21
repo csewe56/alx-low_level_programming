@@ -1,18 +1,23 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- * main - function that holds integers
- * Return: nothing
+/*
+ * a code that prints a[2] = 98
+ * Remember:
+ * - you are not allowed to use a
+ * - you are not allowed to modify p
+ * - only one statement
  */
 int main(void)
 {
-	int a[] = {98, 1024, 402, -1024, 0};
+	int n;
+	int a[5];
 	int *p;
 
-	p = a;
-	p[2] = 98;
+	a[2] = 1024;
+	p = &n;
 
-	/* Add one line of code here */
+	p[5] = 98;
 
+	printf("a[2] = %d\n", a[2]);
 	return (0);
 }
