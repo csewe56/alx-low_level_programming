@@ -10,7 +10,7 @@ int main(void)
 	int *p;
 
 	p = a;
-	*(a + 2) = 98;
+	p[2] = 98;
 
 	/* Add one line of code here */
 
