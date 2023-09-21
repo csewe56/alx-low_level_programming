@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-/*
- * a code that prints a[2] = 98
- * Remember:
- * - you are not allowed to use a
- * - you are not allowed to modify p
- * - only one statement
+/**
+ * main - Entry point
+ *
+ * Program sets a[2] to 98 without using 'a' or modifying 'p'.
+ * It accomplishes this with a single statement.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -21,3 +22,10 @@ int main(void)
 	printf("a[2] = %d\n", a[2]);
 	return (0);
 }
+
+
+
+
+
+
+
