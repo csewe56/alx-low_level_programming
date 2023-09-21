@@ -7,8 +7,9 @@ int main(void)
 
 	p = a;
 
-	printf("a[2] = %d\n", *(p + 2));
+	/* Add one line of code here */
 
 	return (0);
 }
+
 
