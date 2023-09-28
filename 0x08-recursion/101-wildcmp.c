@@ -11,7 +11,7 @@
 int wildcmp(char *s1, char *s2)
 {
 	/* If both strings are empty, they are identical. */
-	if (*s1 == '\0' && *s2 == '\0')
+	if (*s1 == '\0' && (*s2 == '\0' || (*s2 == '*' && *(s2 + 1) == '\0')))
 	{
 	return (1);
 	}
@@ -22,7 +22,7 @@ int wildcmp(char *s1, char *s2)
 	return (wildcmp(s1 + 1, s2 + 1));
 	}
 
-	/* If s2 has a wildcard '*', use it to replace a character in s1 or skip . */
+	/* If s2 has a wildcard '*', use it to replace a character in s1 or skip. */
 	if (*s2 == '*')
 	{
 	return (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2));
@@ -31,3 +31,4 @@ int wildcmp(char *s1, char *s2)
 	/* If none of the above conditions are met, the strings are not identical. */
 	return (0);
 }
+
