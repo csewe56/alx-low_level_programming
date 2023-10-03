@@ -47,9 +47,7 @@ char *argstostr(int ac, char **av)
 		concatenated[k] = '\n';
 		k++;
 	}
-
 	concatenated[k] = '\0';
 
 	return (concatenated);
 }
-
