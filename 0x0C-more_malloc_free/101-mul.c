@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
- * main - Multiply two positive numbers
- * @argc: The number of command-line arguments
- * @argv: An array of command-line argument strings
- *
- * Return: 0 success, 98 incorrect no. of arg or non-digit inputs.
+ * main - multiplies two positive numbers
+ * @argc: argument count
+ * @argv: arguments vector
+ * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
 	unsigned long mul;
