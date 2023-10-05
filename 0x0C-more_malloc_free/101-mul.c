@@ -3,23 +3,6 @@
 #include <stdlib.h>
 
 /**
- * is_digit - Check if a string contains only digits
- * @str: The string to check
- *
- * Return: 1 if the string contains only digits, 0 otherwise
- */
-int is_digit(char *str)
-{
-	while (*str)
-	{
-		if (*str < '0' || *str > '9')
-			return (0);
-		str++;
-	}
-	return (1);
-}
-
-/**
  * main - Multiply two positive numbers
  * @argc: The number of command-line arguments
  * @argv: An array of command-line argument strings
@@ -28,17 +11,26 @@ int is_digit(char *str)
  */
 int main(int argc, char *argv[])
 {
-	int result = 0;
+	unsigned long mul;
+	int i, j;
 
-	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
+	if (argc != 3)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 
-	result = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", result);
+	for (i = 1; i < argc; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (argv[i][j] > 57 || argv[i][j] < 48)
+			{
+				printf("Error\n");
+				exit(98);
+			}
+		}
 
+	mul = atoi(argv[1]) * atoi(argv[2]);
+	printf("%lu\n", mul);
 	return (0);
 }
-
