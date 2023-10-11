@@ -5,6 +5,7 @@
 
 /* Function pointer prototype */
 typedef void (*print_func_t)(char *);
+typedef void (*action_func_t)(int);
 
 /* Prototypes for task-specific functions */
 void print_name(char *name, void (*f)(char *));
