@@ -4,7 +4,7 @@
 void __attribute__((constructor)) hare(void);
 
 /**
- * hare - Prints a string before the
+ * hare - Prints a string before
  * main function is executed
  */
 
