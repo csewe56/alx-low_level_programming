@@ -14,16 +14,16 @@ section .text
 main:
    push rbp
 
-   mov rdi,fmt
-   mov rsi,msg
+   mov rdi,1
+   mov rsi,hello
    mov rax,0
    call printf
 
    pop rbp
 
-   mov rax,0
+   mov rax,60
    ret
 
 section .data
-   msg: db "Hello, Holberton", 0
-   fmt: db "%s", 10, 0
+   hello: db "Hello, Holberton", 0
+   1: db "%s", 10, 0
