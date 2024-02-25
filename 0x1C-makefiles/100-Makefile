@@ -1,0 +1,40 @@
+CC = gcc
+
+SRC = main.c foo.c bar.c
+
+OBJ = $(SRC:.c=.o)
+
+NAME = school
+
+RM = /bin/rm -f
+
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ */*~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
+
+main.o: main.c m.h
+	$(CC) $(CFLAGS) -c main.c -o main.o
+
+foo.o: foo.c m.h
+	$(CC) $(CFLAGS) -c foo.c -o foo.o
+
+bar.o: bar.c m.h
+	$(CC) $(CFLAGS) -c bar.c -o bar.o
+
+%.o: %.c
+	@test -e m.h || (echo "Error: m.h header file is missing"; exit 1)
+	$(CC) $(CFLAGS) -c $< -o $@
+
